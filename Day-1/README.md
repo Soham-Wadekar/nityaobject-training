@@ -1,7 +1,7 @@
 # Day 1 Log
 
 ### PROBLEM STATEMENT
-| Write a Python program to read from a mailbox and print how many emails are available in the "Inbox" or a specific folder. Among the last five emails, how many contain the phrase "in response to your marketing email"? How many contain the response "unsubscribe service"?
+> Write a Python program to read from a mailbox and print how many emails are available in the "Inbox" or a specific folder. Among the last five emails, how many contain the phrase "in response to your marketing email"? How many contain the response "unsubscribe service"?
 
 **METHODOLOGY**
 1. Connect and create an instance to access mail using `IMAP_SERVER` and login credentials

@@ -1,11 +1,14 @@
 # Import necessary libraries
+import os
 import imaplib
 import email
 from email.header import decode_header
+from dotenv import load_dotenv
+
 
 # Define in a .env file (during further use)
-USERNAME = "testemail@provider.com"     # Update this for usage
-PASSWORD = "app password"               # Update this for usage
+USERNAME = "sohamw03@gmail.com"
+PASSWORD = "kpfp gwwd mxup aebi"
 IMAP_SERVER = "imap.gmail.com"
 
 def connect_to_email():

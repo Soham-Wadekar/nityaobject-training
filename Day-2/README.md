@@ -4,7 +4,7 @@
 > Task 1: Create a Dockerfile, build an image, add the Day 1 script in it and run it as a container
 > Task 2: Perform a Trivy scan on the Docker image
 
-**METHODOLOGY**
+**METHODOLOGY**<br>
 *Task 1*
 1. Copy the code to a separate folder
 2. Add a Dockerfile and write the code to run

@@ -1,7 +1,7 @@
 # Day 2 Log
 
 ### PROBLEM STATEMENT
-> Task 1: Create a Dockerfile, build an image, add the Day 1 script in it and run it as a container
+> Task 1: Create a Dockerfile, build an image, add the Day 1 script in it and run it as a container<br>
 > Task 2: Perform a Trivy scan on the Docker image
 
 **METHODOLOGY**<br>

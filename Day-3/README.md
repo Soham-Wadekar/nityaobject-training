@@ -1,8 +1,9 @@
 # Day 3 Log
 
 ### PROBLEM STATEMENT
-> Task 1: Learn the `rpm` package
-> Task 2: Create a rpm package of the python code and install it in a specific directory
+> Task 1: Learn the `rpm` package<br>
+> Task 2: Create a rpm package of the python code and install it in a specific directory<br>
+> Task 3: Read about SUSE documentation
 
 **METHODOLOGY**<br>
 *Task 1*

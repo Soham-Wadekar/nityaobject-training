@@ -1,4 +1,4 @@
-# Day 2 Log
+# Day 3 Log
 
 ### PROBLEM STATEMENT
 > Task 1: Learn the `rpm` package

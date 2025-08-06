@@ -5,7 +5,7 @@ FROM python:3.12.3-slim
 WORKDIR /app
 
 # Copy the contents of the file
-COPY . .
+COPY email_operations.py .
 
 # Install dependencies
 RUN pip install python-dotenv

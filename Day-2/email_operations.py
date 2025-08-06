@@ -5,11 +5,12 @@ import email
 from email.header import decode_header
 from dotenv import load_dotenv
 
+load_dotenv()
 
 # Define in a .env file (during further use)
-USERNAME = "sohamw03@gmail.com"
-PASSWORD = "kpfp gwwd mxup aebi"
-IMAP_SERVER = "imap.gmail.com"
+USERNAME = os.getenv("USERNAME")
+PASSWORD = os.getenv("PASSWORD")
+IMAP_SERVER = os.getenv("IMAP_SERVER")
 
 def connect_to_email():
     try:
@@ -17,7 +18,8 @@ def connect_to_email():
         mail.login(USERNAME, PASSWORD)
         return mail
     except Exception as e:
-        return f"Error: {e}"
+        print("❌ Failed to connect or authenticate:", e)
+        return None
     
 def get_mail_count(mail, folder):
     _, messages = mail.select(folder)

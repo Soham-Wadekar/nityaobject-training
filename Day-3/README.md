@@ -1,24 +1,33 @@
 # Day 2 Log
 
 ### PROBLEM STATEMENT
-> Task 1: Create a Dockerfile, build an image, add the Day 1 script in it and run it as a container
-> Task 2: Perform a Trivy scan on the Docker image
+> Task 1: Learn the `rpm` package
+> Task 2: Create a rpm package of the python code and install it in a specific directory
 
 **METHODOLOGY**<br>
 *Task 1*
 1. Copy the code to a separate folder
-2. Add a Dockerfile and write the code to run
-3. Build a Docker image: `docker build -t <image-name> .`
-4. Run the container: `docker run -it <image-name>`. `-it` tags ensure that the code runs in an interactive terminal mode
+2. Create a Docker container and run the `fedora` shell inside it
+3. Installed necessary packages
+4. Tested basic commands for querying, installing, updating, erasing. Also learned about writing a `.spec` file.
 
 *Task 2*
-1. Run the command: `trivy image <image-name>`
+1. Prepare a source directory by copying the contents of the file to be packaged.
+2. Zip it using `tar`
+3. Move it to the Docker container using `docker cp`
+4. Move it to `~/rpmbuild/SOURCES/`
+5. Create a .spec file inside `~/rpmbuild/SPECS/` using `vim`
+6. Build the rpm using `rpm -ba ~/rpmbuild/SPECS/<package>.spec`
+7. Install the rpm using `rpm -ivh ~/rpmbuild/RPMS/noarch/<package>.spec`
+8. Run the Python file in `/opt/email-script/email_operations.py`
 
 
 **WHAT I LEARNED**
-1. How to create a Dockerfile
-2. How to build a Docker image and run a container
-3. How to perform a Trivy scan
+1. What is RPM and its commands?
+2. How to run Fedora inside Docker and get data from outside the container
+3. How to package a folder into an RPM package
+4. How to install it and run the contents
 
 **REFERENCE MATERIAL**
-https://www.youtube.com/watch?v=fqMOX6JJhGo&t=1636s
+1. https://man7.org/linux/man-pages/man8/rpm.8.html
+2. https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/packaging_and_distributing_software/introduction-to-rpm_packaging-and-distributing-software

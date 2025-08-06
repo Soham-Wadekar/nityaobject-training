@@ -3,7 +3,7 @@
 ### PROBLEM STATEMENT
 > Task 1: Learn the `rpm` package<br>
 > Task 2: Create a rpm package of the python code and install it in a specific directory<br>
-> Task 3: Read about SUSE documentation
+> Task 3: Read about KIWI Next Generation documentation
 
 **METHODOLOGY**<br>
 *Task 1*

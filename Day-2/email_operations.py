@@ -12,6 +12,7 @@ USERNAME = os.getenv("USERNAME")
 PASSWORD = os.getenv("PASSWORD")
 IMAP_SERVER = os.getenv("IMAP_SERVER")
 
+
 def connect_to_email():
     try:
         mail = imaplib.IMAP4_SSL(IMAP_SERVER)
@@ -20,17 +21,19 @@ def connect_to_email():
     except Exception as e:
         print("❌ Failed to connect or authenticate:", e)
         return None
-    
+
+
 def get_mail_count(mail, folder):
     _, messages = mail.select(folder)
 
     return int(messages[0])
 
+
 def get_latest_emails(mail, msg_count, count):
     emails = []
-    for i in range(msg_count, msg_count-count, -1):
+    for i in range(msg_count, msg_count - count, -1):
         _, msg = mail.fetch(str(i), "(RFC822)")
-        
+
         for response in msg:
             if isinstance(response, tuple):
                 msg_ = email.message_from_bytes(response[1])
@@ -44,20 +47,17 @@ def get_latest_emails(mail, msg_count, count):
                             break
                         except:
                             pass
-                
+
                 else:
                     try:
                         body = msg_.get_payload(decode=True).decode()
                     except:
                         pass
-                
-                emails.append({
-                    "from": mail_from,
-                    "subject": subject,
-                    "content": body
-                })
+
+                emails.append({"from": mail_from, "subject": subject, "content": body})
 
     return emails
+
 
 def get_phrase_count(emails, phrase):
     count = 0
@@ -68,16 +68,16 @@ def get_phrase_count(emails, phrase):
 
     return count
 
-    
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     mail = connect_to_email()
     folder = input("Enter folder name: ").upper()
     status, messages = mail.select(folder)
-    
+
     msg_count = get_mail_count(mail, folder)
 
     print(f"Total Mail Count: {msg_count}")
-    
+
     emails = get_latest_emails(mail, msg_count, count=5)
 
     phrase_1 = "in response to your marketing email"

@@ -1,0 +1,16 @@
+
+[2025-08-08 13:17:44.932122]
+ping: googgle.com: No address associated with hostname
+
+[2025-08-08 13:17:52.348456]
+ping: googgle.com: No address associated with hostname
+
+[2025-08-08 13:18:02.615165]
+PING google.com (2404:6800:4009:803::200e) 56 data bytes
+64 bytes from pnbomb-ab-in-x0e.1e100.net (2404:6800:4009:803::200e): icmp_seq=1 ttl=118 time=8.23 ms
+64 bytes from pnbomb-ab-in-x0e.1e100.net (2404:6800:4009:803::200e): icmp_seq=2 ttl=118 time=10.1 ms
+64 bytes from pnbomb-ab-in-x0e.1e100.net (2404:6800:4009:803::200e): icmp_seq=3 ttl=118 time=10.2 ms
+
+--- google.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 8.232/9.500/10.205/0.898 ms

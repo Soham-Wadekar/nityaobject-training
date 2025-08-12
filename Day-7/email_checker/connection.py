@@ -1,5 +1,5 @@
 import imaplib
-from .config import EMAIL_USERNAME, PASSWORD, IMAP_SERVER
+from email_checker.config import EMAIL_USERNAME, PASSWORD, IMAP_SERVER
 
 
 def connect_to_email():

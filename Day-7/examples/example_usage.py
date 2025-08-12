@@ -15,6 +15,9 @@ if __name__ == "__main__":
     print(f"Total Mail Count: {msg_count}")
 
     emails = get_latest_emails(mail, msg_count, count=5)
+    print(f"Latest emails from '{folder}':")
+    for i, email in enumerate(emails, 1):
+        print(f"{i}. From: {email['from']}, Subject: {email['subject']}")
 
     phrase_1 = "in response to your marketing email"
     phrase_1_count = get_phrase_count(emails, phrase_1)

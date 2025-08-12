@@ -11,6 +11,8 @@
     - `utils.py`: Stores the utility functions of the package
 2. Added an example usage in `examples/examples_usage.py`. Run it from the root directory of the package as `python -m examples.example_usage.py`.
 3. You can now import it from the python shell.
+4. Created `setup.py` for CLI functionality
 
 **WHAT I LEARNED**
 1. To create a reusable package in Python
+2. To pass arguments to a Python package through terminal
